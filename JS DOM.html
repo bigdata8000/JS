@@ -1,0 +1,150 @@
+<!-- https://www.w3schools.com/js/js_htmldom.asp -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>My First Page</h2>
+
+    <p id="demo"></p>
+
+    <script>
+    document.getElementById("demo").innerHTML = "Hello World!";
+    </script>
+
+<br>
+<hr>
+<br>
+
+    <h2>Finding HTML Elements by Id</h2>
+
+    <p id="intro">Hello World 2020!</p>
+    <p>This example demonstrates the <b>getElementsById</b> method.</p>
+
+    <p id="demo1"></p>
+
+    <script>
+    var myElement = document.getElementById("intro");
+    document.getElementById("demo1").innerHTML = 
+    "The text from the intro paragraph is " + myElement.innerHTML;
+    </script>
+
+<br>
+<hr>
+<br>
+
+    <script>
+        document.write(Date());
+    </script>
+
+<br>
+<hr>
+<br>
+
+    <!-- https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_color2 -->
+    
+    <h1 id="id1">My Heading 1</h1>
+
+    <button type="button" 
+    onclick="document.getElementById('id1').style.color = 'red'">
+    Click Me! 1</button>
+
+    <button type="button" 
+    onclick="document.getElementById('id1').style.color = 'Green'">
+    Click Me! 2</button>
+
+    <button type="button" 
+    onclick="document.getElementById('id1').style.color = 'Blue'">
+    Click Me! 3</button>
+    
+<br>
+<hr>
+<br>
+
+    <!--https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_animate_3 -->
+
+    <h2>JS CSS Animations</h2>
+    <style>
+        #container {
+          width: 400px;
+          height: 400px;
+          position: relative;
+          background: yellow;
+        }
+        #animate {
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          background-color: red;
+        }
+        </style>
+        <body>
+        
+        <p><button onclick="myMove()">Click Me</button></p> 
+        
+        <div id ="container">
+          <div id ="animate"></div>
+        </div>
+        
+        <script>
+        function myMove() {
+          var elem = document.getElementById("animate");   
+          var pos = 0;
+          var id = setInterval(frame, 5);
+          function frame() {
+            if (pos == 350) {
+              clearInterval(id);
+            } else {
+              pos++; 
+              elem.style.top = pos + "px"; 
+              elem.style.left = pos + "px"; 
+            }
+          }
+        }
+        </script>
+
+<br>
+<hr>
+<br>
+
+    <!-- https://www.w3schools.com/js/tryit.asp?filename=tryjs_events1 -->
+    <p>Click the button to display the date.</p>
+
+    <button onclick="displayDate()">The time is?</button>
+
+    <script>
+    function displayDate() {
+    document.getElementById("demo5").innerHTML = Date();
+    }
+    </script>
+
+    <p id="demo5"></p>
+
+<br>
+<hr>
+<br>
+
+    <!-- https://www.w3schools.com/js/tryit.asp?filename=tryjs_events_mouseover -->
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+    style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+    Mouse Over Me</div>
+
+    <script>
+    function mOver(obj) {
+    obj.innerHTML = "Thank You"
+    }
+
+    function mOut(obj) {
+    obj.innerHTML = "Mouse Over Me"
+    }
+    </script>
+
+<br>
+<hr>
+<br>
+
+
+
+
+</body>
+</html>
