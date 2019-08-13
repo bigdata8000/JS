@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>What Can JavaScript Do?</h2>
+    <p id="demo">JavaScript can change HTML content.</p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+<br>
+<hr>
+<br>
+
+    <h2>What Can JavaScript Do?</h2>
+    <p>JavaScript can change HTML attribute values.</p>
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+    <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+    <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+    <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+<br>
+<hr>
+<br>
+
+    <h2>What Can JavaScript Do?</h2>
+    <p id="demo1">JavaScript can change the style of an HTML element.</p>
+    <button type="button" onclick="document.getElementById('demo1').style.fontSize='35px'">Click Me!</button>
+
+<br>
+<hr>
+<br>
+
+    <h2>What Can JavaScript Do?</h2>
+    <p id="demo2">JavaScript can hide HTML elements.</p>
+    <button type="button" onclick="document.getElementById('demo2').style.display='none'">Click Me!</button>
+
+<br>
+<hr>
+<br>
+
+    <h2>What Can JavaScript Do?</h2>
+    <p>JavaScript can show hidden HTML elements.</p>
+    <p id="demo3" style="display:none">Hello JavaScript!</p>
+    <button type="button" onclick="document.getElementById('demo3').style.display='block'">Click Me!</button>
+
+<br>
+<hr>
+<br>
+
+<script>
+        function myFunction() {
+          document.getElementById("demo4").innerHTML = "Paragraph changed.";
+        }
+        </script>
+        </head>
+        <body>
+        
+        <h2>JavaScript in Head</h2>
+        
+        <p id="demo4">A Paragraph.</p>
+        
+        <button type="button" onclick="myFunction()">Try it</button>
+        
+<br>
+<hr>
+<br>
+
+    <!-- external JS-->
+    <script src="myScript.js"></script>
+
+<br>
+<hr>
+<br>
+
+    <h1>My First Web Page</h1>
+    <p>My First Paragraph</p>
+
+    <p id="demo5"></p>
+
+    <script>
+    document.getElementById("demo5").innerHTML = 5 + 6;
+    </script>
+
+<br>
+<hr>
+<br>
+
+    <h2>JavaScript Statements</h2>
+
+    <p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer.</p>
+
+    <p id="demo6"></p>
+
+    <script>
+    var x, y, z;  // Statement 1
+    x = 5;    // Statement 2
+    y = 6;    // Statement 3
+    z = x + y;  // Statement 4
+
+    document.getElementById("demo6").innerHTML =
+    "The value of z is " + z + ".";  
+    </script>
+
+<br>
+<hr>
+<br>
+
+    <h2>JavaScript Statements</h2>
+
+    <p>JavaScript code blocks are written between { and }</p>
+
+    <button type="button" onclick="myFunction()">Click Me!</button>
+
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+
+    <script>
+    function myFunction() {
+    document.getElementById("demo7").innerHTML = "Hello Dolly!";
+    document.getElementById("demo8").innerHTML = "How are you?";
+    }
+    </script>
+
+<br>
+<hr>
+<br>
+
+    <!--
+        
+    JavaScript and Camel Case, JS is case sensitive.
+
+    Historically, programmers have used different ways of joining multiple words into one variable name:
+
+    Hyphens:
+    first-name, last-name, master-card, inter-city.
+
+    Underscore:
+    first_name, last_name, master_card, inter_city.
+
+    Upper Camel Case (Pascal Case):
+    FirstName, LastName, MasterCard, InterCity.
+
+    Lower Camel Case:
+    JavaScript programmers tend to use camel case that starts with a lowercase letter:
+    firstName, lastName, masterCard, interCity.
+
+    -->
+
+    <h2>JavaScript Operators</h2>
+
+    <p>The + operator concatenates (adds) strings.</p>
+    
+    <p id="demo9"></p>
+    
+    <script>
+    var txt1 = "John";
+    var txt2 = "Doe";
+    document.getElementById("demo9").innerHTML = txt1 + " " + txt2;
+    </script>
+
+<br>
+<hr>
+<br>
+
+    <h2>JavaScript Arrays []</h2>
+
+    <p>Array indexes are zero-based, which means the first item is [0].</p>
+
+    <p id="demo10"></p>
+
+    <script>
+    var cars = ["Saab","Volvo","BMW"];
+
+    document.getElementById("demo10").innerHTML = cars[0];
+    </script>
+
+<br>
+<hr>
+<br>
+
+    <h2>JavaScript Objects {}</h2>
+
+    <p id="demo11"></p>
+
+    <script>
+    var person = {
+    firstName : "John",
+    lastName  : "Doe",
+    age     : 50,
+    eyeColor  : "blue"
+    };
+
+    document.getElementById("demo11").innerHTML =
+    person.firstName + " is " + person.age + " years old.";
+    </script>
+
+<br>
+<hr>
+<br>
+
+<!-- 
+    09Aug2019 on: https://www.w3schools.com/js/js_functions.asp 
+-->
+
+<h2>JavaScript Functions</h2>
+
+    <p id="demo12"></p>
+
+    <script>
+    document.getElementById("demo12").innerHTML =
+    "The temperature is " + toCelsius(77) + " Celsius";
+
+    function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+    } 
+    </script>
+
+<br>
+<hr>
+<br>
+
+
+
+
+</body>
+</html>
