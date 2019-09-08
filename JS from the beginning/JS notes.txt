@@ -1,0 +1,4 @@
+Extensions:
+- Live Server.
+- Bracket Pair Colorizer.
+- JavaScript (ES6) code snippets.
